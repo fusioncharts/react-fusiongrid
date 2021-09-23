@@ -1,8 +1,8 @@
 {
   "name": "react-fusiongrid",
   "version": "0.1.0",
-  "main": "dist/index.esm.js",
-  "module": "dist/index.esm.js",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
   "source": "src/index.js",
   "private": true,
   "files": [
@@ -14,7 +14,8 @@
     "react-dom": "^17.0.2"
   },
   "scripts": {
-    "build": "rollup -c",
+    "build": "rm -rf dist && NODE_ENV=production babel src --out-dir dist --copy-files",
+    "build-rollup": "rollup -c",
     "build-watch": "rollup -c -w"
   },
   "eslintConfig": {

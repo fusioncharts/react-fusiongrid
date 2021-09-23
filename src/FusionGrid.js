@@ -1,10 +1,14 @@
-import FusionGrid from "fusiongrid";
 import React from "react";
 
 class ReactFG extends React.Component {
+  static fcRoot(core) {
+    ReactFG.fusionGrid = core;
+  }
+
   constructor(props) {
     super(props);
     this.containerRef = React.createRef();
+    this.FusionGrid = ReactFG.fusionGrid || window.FusionGrid;
   }
 
   componentDidMount() {
@@ -38,7 +42,7 @@ class ReactFG extends React.Component {
 
   renderGrid() {
     const { data, config = {} } = this.props;
-    this.grid = new FusionGrid(this.containerRef.current, data, config);
+    this.grid = new this.FusionGrid(this.containerRef.current, data, config);
 
     if (this.props.onRender && typeof this.props.onRender === "function") {
       this.props.onRender(this.grid);

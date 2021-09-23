@@ -1,1 +1,1 @@
-export { default as FusionGrid } from './FusionGrid';
+export { default as ReactFusionGrid } from './FusionGrid';
