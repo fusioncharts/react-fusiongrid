@@ -5,6 +5,7 @@ import pkg from "./package.json";
 import resolve from "@rollup/plugin-node-resolve";
 import commonjs from "@rollup/plugin-commonjs";
 import css from "rollup-plugin-import-css";
+import { terser } from "rollup-plugin-terser";
 
 export default {
   input: pkg.source,
@@ -22,6 +23,7 @@ export default {
     }),
     commonjs(),
     del({ targets: ["dist/*"] }),
+    terser(),
   ],
   external: Object.keys(pkg.peerDependencies || {}),
 };
