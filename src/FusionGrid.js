@@ -1,7 +1,7 @@
 import React from "react";
 
 class ReactFG extends React.Component {
-  static fcRoot(core) {
+  static fgRoot(core) {
     ReactFG.fusionGrid = core;
   }
 
