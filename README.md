@@ -1,4 +1,4 @@
-A simple and lightweight official React component for FusionGrid JavaScript grid library. `react-fusioncharts` enables you to add JavaScript grid in your React application or project without any hassle.
+A simple and lightweight official React component for FusionGrid JavaScript grid library. `react-fusiongrid` enables you to add JavaScript grid in your React application or project without any hassle.
 
 - Github Repo: [https://github.com/fusioncharts/react-fusiongrid](https://github.com/fusioncharts/react-fusiongrid)
 
