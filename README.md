@@ -116,7 +116,7 @@ const dataTable = dataStore.createDataTable(data, schema, {
 enableIndex: false
 });
 
-ReactDOM.render(<ReactFusionGrid data={dataTable} config={gridConfig} />, document.getElementById('root'));
+ReactDOM.render(<ReactFusionGrid width={400} height={400} data={dataTable} config={gridConfig} />, document.getElementById('root'));
 
 
 ## Working with Events
@@ -144,7 +144,12 @@ gridEventCallback (eventObj, dataObj) {
 Attach the callback to an event through the React-FG component:
 
 ```javascript
-<ReactFC data={data} fgEvent-EVENTNAME={this.chartEventCallback} />
+<ReactFC
+  width={width}
+  height={height}
+  data={data}
+  fgEvent-EVENTNAME={this.chartEventCallback}
+/>
 ```
 
 Where, EVENTNAME is to be replaced by the event you want to track.

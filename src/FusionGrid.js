@@ -41,11 +41,11 @@ class ReactFG extends React.Component {
   componentWillUnmount() {}
 
   renderGrid() {
-    const { data, config = {} } = this.props;
+    const { data, config = {}, onRender } = this.props;
     this.grid = new this.FusionGrid(this.containerRef.current, data, config);
 
-    if (this.props.onRender && typeof this.props.onRender === "function") {
-      this.props.onRender(this.grid);
+    if (onRender && typeof onRender === "function") {
+      onRender(this.grid);
     }
 
     this.addGridEvents();
@@ -67,11 +67,12 @@ class ReactFG extends React.Component {
   }
 
   render() {
+    const { className, height, width } = this.props;
     return (
       <div
         ref={this.containerRef}
-        className={this.props.className}
-        style={{ width: "100%", height: "100%" }}
+        className={className}
+        style={{ width: width, height: height }}
       ></div>
     );
   }
