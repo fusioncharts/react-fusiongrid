@@ -57,7 +57,7 @@ import ReactDOM from 'react-dom';
 import FusionGrid, { DataStore } from 'fusiongrid';
 import ReactFusionGrid from 'react-fusiongrid';
 
-React.fgRoot(FusionGrid);
+ReactFusionGrid.fgRoot(FusionGrid);
 
 const schema = [
   {
