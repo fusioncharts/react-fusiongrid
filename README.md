@@ -14,7 +14,7 @@ A simple and lightweight official React component for FusionGrid JavaScript grid
 There are multiple ways to install `react-fusiongrid` component.
 
 **Direct Download**
-All binaries are located on our [github repository](https://github.com/fusiongrid/react-fusiongrid-component).
+All binaries are located on our [github repository](https://github.com/fusioncharts/react-fusiongrid).
 
 **Install from NPM**
 
